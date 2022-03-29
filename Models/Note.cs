@@ -9,11 +9,14 @@ namespace Notepad.Models
 
         [StringLength(60, MinimumLength = 3)]
         [Required]
+        public string Author { get; set; }
+
+        [StringLength(60, MinimumLength = 3)]
+        [Required]
         public string Title { get; set; }
 
         [StringLength(1000)]
         public string Body { get; set; }
-        public User User { get; set; }
 
     }
 }
