@@ -1,10 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Notepad.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<NotepadContext>(options =>
+
+
     options.UseSqlServer(builder.Configuration.GetConnectionString("NotepadContext")));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

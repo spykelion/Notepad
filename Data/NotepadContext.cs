@@ -1,5 +1,4 @@
-﻿#nullable disable
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,8 +13,6 @@ namespace Notepad.Data
             : base(options)
         {
         }
-
-        public DbSet<Notepad.Models.User> User { get; set; }
 
         public DbSet<Notepad.Models.Note> Note { get; set; }
     }
