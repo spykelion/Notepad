@@ -15,7 +15,7 @@ namespace Notepad.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return Redirect("/Notes");
         }
 
         public IActionResult Privacy()

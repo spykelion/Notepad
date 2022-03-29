@@ -1,5 +1,4 @@
-﻿#nullable disable
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -55,7 +54,7 @@ namespace Notepad.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Body")] Note note)
+        public async Task<IActionResult> Create([Bind("Id,Author,Title,Body")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace Notepad.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Body")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Author,Title,Body")] Note note)
         {
             if (id != note.Id)
             {
