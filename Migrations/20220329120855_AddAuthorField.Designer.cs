@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Notepad.Data;
 
@@ -10,9 +11,10 @@ using Notepad.Data;
 namespace Notepad.Migrations
 {
     [DbContext(typeof(NotepadContext))]
-    partial class NotepadContextModelSnapshot : ModelSnapshot
+    [Migration("20220329120855_AddAuthorField")]
+    partial class AddAuthorField
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
